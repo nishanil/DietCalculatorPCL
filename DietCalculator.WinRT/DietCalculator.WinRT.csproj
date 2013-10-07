@@ -150,15 +150,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="WinRTXamlToolkit">
-      <HintPath>..\packages\winrtxamltoolkit.1.5.3.0\lib\netcore45\WinRTXamlToolkit.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DietCalculator.Core\DietCalculator.Core.csproj">
       <Project>{c3df59f4-db8d-498b-b789-0b8761c62a54}</Project>
       <Name>DietCalculator.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WinRTXamlToolkit">
+      <HintPath>..\packages\winrtxamltoolkit.1.5.3.0\lib\netcore45\WinRTXamlToolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
