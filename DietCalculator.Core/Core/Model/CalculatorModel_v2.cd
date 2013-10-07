@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Silverlight_MVC.DietCalculatorModel_v2" Collapsed="true">
+    <Position X="2" Y="0.5" Width="2.25" />
+    <Members>
+      <Event Name="ActivityChanged" Hidden="true" />
+      <Field Name="age" Hidden="true" />
+      <Event Name="AgeChanged" Hidden="true" />
+      <Field Name="bmi" Hidden="true" />
+      <Event Name="BMIChanged" Hidden="true" />
+      <Method Name="CalculateBMI" Hidden="true" />
+      <Method Name="CalculateBMR" Hidden="true" />
+      <Method Name="CalculateCaloriesPerDay" Hidden="true" />
+      <Method Name="CalculateCholesterolRatio" Hidden="true" />
+      <Method Name="CalculateIdealBMI" Hidden="true" />
+      <Method Name="CalculateIdealWeight" Hidden="true" />
+      <Method Name="CalculateLeanBodyMass" Hidden="true" />
+      <Method Name="CalculatePercentBodyFat" Hidden="true" />
+      <Method Name="CalculateWaistHeightRatio" Hidden="true" />
+      <Method Name="CalculateWaistHipsRatio" Hidden="true" />
+      <Field Name="caloriesPerDay" Hidden="true" />
+      <Event Name="CaloriesPerDayChanged" Hidden="true" />
+      <Field Name="cholesterol" Hidden="true" />
+      <Event Name="CholesterolChanged" Hidden="true" />
+      <Field Name="cholesterolRatio" Hidden="true" />
+      <Event Name="CholesterolRatioChanged" Hidden="true" />
+      <Field Name="cholesterolResult" Hidden="true" />
+      <Event Name="CholesterolResultChanged" Hidden="true" />
+      <Field Name="hdl" Hidden="true" />
+      <Event Name="HDLChanged" Hidden="true" />
+      <Field Name="height" Hidden="true" />
+      <Event Name="HeightChanged" Hidden="true" />
+      <Field Name="hips" Hidden="true" />
+      <Event Name="HipsChanged" Hidden="true" />
+      <Field Name="hipsEnabled" Hidden="true" />
+      <Event Name="HipsEnabledChanged" Hidden="true" />
+      <Field Name="idealBmi" Hidden="true" />
+      <Event Name="IdealBMIChanged" Hidden="true" />
+      <Field Name="idealWeight" Hidden="true" />
+      <Event Name="IdealWeightChanged" Hidden="true" />
+      <Field Name="isMale" Hidden="true" />
+      <Event Name="IsMaleChanged" Hidden="true" />
+      <Field Name="leanBodyMass" Hidden="true" />
+      <Event Name="LeanBodyMassChanged" Hidden="true" />
+      <Field Name="levelOfActivity" Hidden="true" />
+      <Method Name="LoadCholesterolResult" Hidden="true" />
+      <Method Name="LoadWaistResult" Hidden="true" />
+      <Method Name="LoadWeightResult" Hidden="true" />
+      <Event Name="ModelChanged" Hidden="true" />
+      <Field Name="neck" Hidden="true" />
+      <Event Name="NeckChanged" Hidden="true" />
+      <Method Name="OnPropertyChanged" Hidden="true" />
+      <Field Name="percentBodyFat" Hidden="true" />
+      <Event Name="PercentBodyFatChanged" Hidden="true" />
+      <Event Name="PropertyChanged" Hidden="true" />
+      <Field Name="waist" Hidden="true" />
+      <Event Name="WaistChanged" Hidden="true" />
+      <Field Name="waistHeightRatio" Hidden="true" />
+      <Event Name="WaistHeightRatioChanged" Hidden="true" />
+      <Field Name="waistHipsRatio" Hidden="true" />
+      <Event Name="WaistHipsRatioChanged" Hidden="true" />
+      <Field Name="waistResult" Hidden="true" />
+      <Event Name="WaistResultChanged" Hidden="true" />
+      <Field Name="weight" Hidden="true" />
+      <Event Name="WeightChanged" Hidden="true" />
+      <Event Name="WeightResultChanged" Hidden="true" />
+      <Field Name="weigthResult" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AYHNAsEGBwaCZDaAIuUWhmAAhCQggkQrCcACCUABZAA=</HashCode>
+      <FileName>Model\DietCalculatorModel_v2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

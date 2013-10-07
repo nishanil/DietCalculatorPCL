@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Silverlight_MVC.DietCalculatorModel">
+    <Position X="2.5" Y="0.5" Width="2" />
+    <Members>
+      <Event Name="ActivityChanged" Hidden="true" />
+      <Field Name="age" Hidden="true" />
+      <Event Name="AgeChanged" Hidden="true" />
+      <Field Name="bmi" Hidden="true" />
+      <Event Name="BMIChanged" Hidden="true" />
+      <Field Name="caloriesPerDay" Hidden="true" />
+      <Event Name="CaloriesPerDayChanged" Hidden="true" />
+      <Field Name="cholesterol" Hidden="true" />
+      <Event Name="CholesterolChanged" Hidden="true" />
+      <Field Name="cholesterolRatio" Hidden="true" />
+      <Event Name="CholesterolRatioChanged" Hidden="true" />
+      <Field Name="cholesterolResult" Hidden="true" />
+      <Event Name="CholesterolResultChanged" Hidden="true" />
+      <Field Name="hdl" Hidden="true" />
+      <Event Name="HDLChanged" Hidden="true" />
+      <Field Name="height" Hidden="true" />
+      <Field Name="hips" Hidden="true" />
+      <Event Name="HipsChanged" Hidden="true" />
+      <Field Name="idealBmi" Hidden="true" />
+      <Event Name="IdealBMIChanged" Hidden="true" />
+      <Field Name="idealWeight" Hidden="true" />
+      <Event Name="IdealWeightChanged" Hidden="true" />
+      <Field Name="isMale" Hidden="true" />
+      <Event Name="IsMaleChanged" Hidden="true" />
+      <Field Name="leanBodyMass" Hidden="true" />
+      <Event Name="LeanBodyMassChanged" Hidden="true" />
+      <Field Name="levelOfActivity" Hidden="true" />
+      <Event Name="ModelChanged" Hidden="true" />
+      <Field Name="neck" Hidden="true" />
+      <Event Name="NeckChanged" Hidden="true" />
+      <Method Name="OnActivityChanged" Hidden="true" />
+      <Method Name="OnAgeChanged" Hidden="true" />
+      <Method Name="OnBMIChanged" Hidden="true" />
+      <Method Name="OnCaloriesPerDayChanged" Hidden="true" />
+      <Method Name="OnCholesterolChanged" Hidden="true" />
+      <Method Name="OnCholesterolRatioChanged" Hidden="true" />
+      <Method Name="OnCholesterolResultChanged" Hidden="true" />
+      <Method Name="OnHDLChanged" Hidden="true" />
+      <Method Name="OnHeightChanged" Hidden="true" />
+      <Method Name="OnHipsChanged" Hidden="true" />
+      <Method Name="OnIdealBMIChanged" Hidden="true" />
+      <Method Name="OnIdealWeightChanged" Hidden="true" />
+      <Method Name="OnIsMaleChanged" Hidden="true" />
+      <Method Name="OnLeanBodyMassChanged" Hidden="true" />
+      <Method Name="OnModelChanged" Hidden="true" />
+      <Method Name="OnNeckChanged" Hidden="true" />
+      <Method Name="OnPercentBodyFatChanged" Hidden="true" />
+      <Method Name="OnWaistChanged" Hidden="true" />
+      <Method Name="OnWaistHeightRatioChanged" Hidden="true" />
+      <Method Name="OnWaistHipsRatioChanged" Hidden="true" />
+      <Method Name="OnWaistResultChanged" Hidden="true" />
+      <Method Name="OnWeightChanged" Hidden="true" />
+      <Method Name="OnWeightResultChanged" Hidden="true" />
+      <Field Name="percentBodyFat" Hidden="true" />
+      <Event Name="PercentBodyFatChanged" Hidden="true" />
+      <Field Name="waist" Hidden="true" />
+      <Event Name="WaistChanged" Hidden="true" />
+      <Field Name="waistHeightRatio" Hidden="true" />
+      <Event Name="WaistHeightRatioChanged" Hidden="true" />
+      <Field Name="waistHipsRatio" Hidden="true" />
+      <Event Name="WaistHipsRatioChanged" Hidden="true" />
+      <Field Name="waistResult" Hidden="true" />
+      <Event Name="WaistResultChanged" Hidden="true" />
+      <Field Name="weight" Hidden="true" />
+      <Event Name="WeightChanged" Hidden="true" />
+      <Event Name="WeightResultChanged" Hidden="true" />
+      <Field Name="weigthResult" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QYHNA8UORwaaZLaUAuUWpkAABDUAwkQrCcASCUgBZQA=</HashCode>
+      <FileName>Model\DietCalculatorModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

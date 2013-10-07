@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="Silverlight_MVC.IDietCalculatorModel">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIHNAsEGBgQCYBSAAuQQBkAAACAAggQIAEACAUAAAAA=</HashCode>
+      <FileName>Model\IDietCalculatorModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Silverlight_MVC.LevelOfActivity">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAABAAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Model\IDietCalculatorModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
