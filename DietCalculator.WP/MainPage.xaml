@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -42,23 +43,65 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Diet Calculator" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock Text="DIET CALCULATOR" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
             <TextBlock Text="your details" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
             <StackPanel Orientation="Vertical">
-              <TextBlock Text="Age"></TextBlock>
-              <TextBox Name="txtAge"></TextBox>
-                <TextBlock Text="Gender"></TextBlock>
-                <ComboBox Name="cmbGender">
-                    <system:String>Item 1</system:String>
-                    <system:String>Item 2</system:String>
-                    <system:String>Item 3</system:String>
-                </ComboBox>
-            </StackPanel>
+              <TextBlock Text="Age:"></TextBlock>
+                    <toolkit:PhoneTextBox InputScope="Number" x:Name="txtAge" Hint="ex. 45"/>
+                    <TextBlock Text="Gender:"></TextBlock>
+                <toolkit:ListPicker Name="listGender">
+                    <system:String>Male</system:String>
+                    <system:String>Female</system:String>
+                </toolkit:ListPicker>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Height &amp; Weight" FontSize="40" Padding="0"></TextBlock>
+                        <TextBlock Text="Weight (in kg):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtWeight" Hint="ex. 65"></toolkit:PhoneTextBox>
+                        <TextBlock Text="Height (in cm):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtHeight" Hint="ex. 170"></toolkit:PhoneTextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Waist &amp; Hips" FontSize="40" Padding="0"></TextBlock>
+                        <TextBlock Text="Waist (in cm):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtWaist" Hint="ex. 47"></toolkit:PhoneTextBox>
+                        <TextBlock Text="Hips (in cm):" Name="tblHips"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtHips" Hint="ex. 88"></toolkit:PhoneTextBox>
+                    </StackPanel>
 
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Ideal Weight &amp; BMI" FontSize="40" Padding="0"></TextBlock>
+                        <TextBlock Text="Ideal Weight (in kg):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtIdealWeight" Hint="ex. 45"></toolkit:PhoneTextBox>
+                        <TextBlock Text="BMI (in kg/m2):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtIdealBMI" Hint="ex. 18"></toolkit:PhoneTextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Cholestrol &amp; HDL" FontSize="40" Padding="0"></TextBlock>
+                        <TextBlock Text="Cholestrol (in mmol/L):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtCholestrol" Hint="ex. 5.17"></toolkit:PhoneTextBox>
+                        <TextBlock Text="HDL (in mmol/L):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtHDL" Hint="ex. 1.56"></toolkit:PhoneTextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Neck" FontSize="40" Padding="0"></TextBlock>
+                        <TextBlock Text="Neck (in cm):"></TextBlock>
+                        <toolkit:PhoneTextBox InputScope="Number" Name="txtNeck" Hint="ex. 30"></toolkit:PhoneTextBox>
+                    </StackPanel>
+                    <TextBlock Text="Level of Activity:"></TextBlock>
+                    <toolkit:ListPicker Name="listActivity">
+                        <system:String>Sedentary</system:String>
+                        <system:String>Active</system:String>
+                        <system:String>Moderate</system:String>
+                    </toolkit:ListPicker>
+                <Button Name="btnCalculate" Click="BtnCalculate_OnClick">Calculate</Button>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
