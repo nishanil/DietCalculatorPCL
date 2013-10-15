@@ -4,9 +4,6 @@ DietCalculatorPortable
 DietCalculator built using Portable Class Libraries
 
 
-WINRT uses winrtxamltoolkit Nuget Package. Please update them before compiling.
-<ul>
+Please update Nuget Packages in WINRT and WP projects before compiling. 
 
-<li>uninstall-package winrtxamltoolkit </li>
-<li>install-package winrtxamltoolkit</li>
-</ul>
+<i>Right click on the Solution node in Solution Explorer and select Enable NuGet Package Restore. </i>
