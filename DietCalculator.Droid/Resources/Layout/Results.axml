@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/resultsHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+        <ImageView
+            android:src="@drawable/thickblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/caloriesPerDayTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Calories Per Day:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/caloriesPerDayResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="786"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/leanBodyMassTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Lean Body Mass:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/leanBodyMassResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/fatTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Fat:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fatResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 %"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/waistHipsRatioTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Waist Hips Ratio:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/waistHipsRatioResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 cm"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/bmiRatioTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="BMI Ratio:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bmiRatioResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/cholestrolRatioTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Cholestrol Ratio:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cholestrolRatioResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 mmol/L"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/waistHeightRatioTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Waist Height Ratio:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/waistHeightRatioResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 kg"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+            <TextView
+                android:id="@+id/idealWeihtResultTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Ideal Weight:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:gravity="left" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idealWeihtResultText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 kg"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/thinblueline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingBottom="10dip" />
+    </LinearLayout>
+</ScrollView>

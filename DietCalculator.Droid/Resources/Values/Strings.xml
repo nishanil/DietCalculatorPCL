@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">DietCalculator.Droid</string>
+  <string-array name="gender_array">
+    <item>Male</item>
+    <item>Female</item>
+  </string-array>
+  <string-array name="levelOfActivity_array">
+    <item>Sedentary</item>
+    <item>Moderate</item>
+    <item>Active</item>
+  </string-array>
+</resources>
