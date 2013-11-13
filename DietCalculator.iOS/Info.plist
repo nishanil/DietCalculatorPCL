@@ -15,5 +15,13 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Diet Calculator</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.nnish.DietCalculator</string>
+	<key>CFBundleVersion</key>
+	<string></string>
+	<key>NSMainNibFile</key>
+	<string></string>
 </dict>
 </plist>
