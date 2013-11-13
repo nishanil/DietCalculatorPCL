@@ -1,4 +1,4 @@
-DietCalculatorPortable
+DietCalculatorPCL
 ======================
 
 DietCalculator built using Portable Class Libraries
