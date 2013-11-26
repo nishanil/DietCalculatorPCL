@@ -114,8 +114,6 @@ namespace DietCalculator.WinRT
             resultsControl.Visibility = Visibility.Visible;
             MainContent.Width = 2600;
             MainScroll.ScrollToHorizontalOffsetWithAnimation(1000);
-            MainScroll.ScrollToVerticalOffsetWithAnimation(1);
-            //this.Frame.Navigate(typeof (ResultsPage), model);
         }
 
        
