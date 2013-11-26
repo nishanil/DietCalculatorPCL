@@ -11,13 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight_MVC", "Silverli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight_MVC.Web", "Silverlight_MVC.Web\Silverlight_MVC.Web.csproj", "{B9B13908-101D-46E2-A92A-44EA978A46E7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F3965C8B-BA5C-48C4-A10A-5A9C5052630D}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietCalculator.iOS", "DietCalculator.iOS\DietCalculator.iOS.csproj", "{2E767A03-6A3A-4D7C-A1DC-E9FE8DA3CD51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietCalculator.Droid", "DietCalculator.Droid\DietCalculator.Droid.csproj", "{64373EF4-B798-43EC-A7BF-818E047ACA80}"
