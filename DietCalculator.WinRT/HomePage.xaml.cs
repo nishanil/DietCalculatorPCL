@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using WinRTXamlToolkit;
+using WinRTXamlToolkit.Controls.Extensions;
 
 namespace DietCalculator.WinRT
 {
@@ -16,7 +18,6 @@ namespace DietCalculator.WinRT
     {
         IDietCalculatorModel model;
         IDietCalculatorController controller;
-
         public HomePage()
         {
             this.InitializeComponent();
@@ -25,6 +26,7 @@ namespace DietCalculator.WinRT
             // we will make use of the existing pattern to achieve the results
             model = new DietCalculatorModel();
             controller = new DietCalculatorController(model);
+
 
             // bydefault Male is Selected, hence collapse hips
             txtHips.Visibility = tblHips.Visibility =  Visibility.Collapsed;
@@ -106,7 +108,14 @@ namespace DietCalculator.WinRT
             var selectedActivity = (string)cmbLevelOfActivity.SelectedItem;
             controller.SetActivity((LevelOfActivity)Enum.Parse(typeof(LevelOfActivity), selectedActivity));
 
-            this.Frame.Navigate(typeof (ResultsPage), model);
+            // HACK: force refresh UI
+            resultsControl.DataContext = null;
+            resultsControl.DataContext = model;
+            resultsControl.Visibility = Visibility.Visible;
+            MainContent.Width = 2600;
+            MainScroll.ScrollToHorizontalOffsetWithAnimation(1000);
+            MainScroll.ScrollToVerticalOffsetWithAnimation(1);
+            //this.Frame.Navigate(typeof (ResultsPage), model);
         }
 
        

@@ -1,0 +1,81 @@
+﻿<UserControl
+    x:Class="DietCalculator.WinRT.ResultsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DietCalculator.WinRT"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+>
+    <StackPanel Height="645" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,0,0,0" Orientation="Horizontal">
+        <StackPanel HorizontalAlignment="Left" Height="645" Width="1000">
+            <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Results" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Calaories Per Day: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" Text="{Binding CaloriesPerDay}" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Lean Body Mass: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" Text="{Binding LeanBodyMass}" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Fat: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin">
+                                <Run Text="{Binding PercentBodyFat}"/>
+                                <Run Text="%"/>
+
+                    </TextBlock>
+
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Waist Hips Ratio: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin">
+                                <Run Text="{Binding WaistHipsRatio}"></Run>
+                                <Run Text="cm"></Run>
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="BMI Ratio: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" Text="{Binding BMI}" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Cholestrol Ratio: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin">
+                                <Run Text="{Binding CholesterolRatio}"></Run>
+                                <Run Text="mmol/L"></Run>
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Waist Height Ratio: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin">
+                                <Run Text="{Binding WaistHeightRatio}"></Run>
+                                <Run Text="cm"></Run>
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="800" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="800" Background="#0099CC" Margin="0,0,-2,0">
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="10,0,0,0" TextWrapping="Wrap" Text="Ideal Weight: " VerticalAlignment="Top" Width="197" FontSize="21.333" Padding="0,15,0,0" FontWeight="Thin"/>
+                    <TextBlock HorizontalAlignment="Left" Height="49" Margin="195,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontFamily="Segoe UI" FontSize="30.667" Padding="0,5,0,0" FontWeight="Thin">
+                                <Run Text="{Binding IdealWeight}"></Run>
+                                <Run Text="kg"></Run>
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>

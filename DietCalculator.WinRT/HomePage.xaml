@@ -9,12 +9,43 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-  xmlns:toolkit="using:WinRTXamlToolkit.Controls">
+  xmlns:toolkit="using:WinRTXamlToolkit.Controls" >
 
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Diet Calculator</x:String>
+        <Style x:Key="headerStyle" TargetType="TextBlock">
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Foreground" Value="#0099CC" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Padding"  Value="0"/>
+        </Style>
+        <Style x:Key="waterMarkTextBoxStyle" TargetType="toolkit:WatermarkTextBox">
+            <Setter Property="Width" Value="467"/>
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Margin" Value="5,0,0,0" />
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="innerTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="304" />
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Padding" Value="0,4,0,0" />
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
     </Page.Resources>
 
     <!--
@@ -40,111 +71,104 @@
         </Grid>
 
         <ScrollViewer x:Name="MainScroll"  Grid.Row="1" Style="{StaticResource HorizontalScrollViewerStyle}">
-            <StackPanel Height="545" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,0,0,0" Orientation="Horizontal">
-                <StackPanel HorizontalAlignment="Left" Height="545" Width="467">
-                    <!--<TextBlock HorizontalAlignment="Left" Height="40" Margin="0" TextWrapping="Wrap" Text="Enter" Width="319" VerticalAlignment="Top" Foreground="#FFF42200" FontFamily="Segoe UI" FontSize="32"/>-->
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Age &amp; Gender" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <Grid Height="45">
-                            <toolkit:WatermarkTextBox Name="txtAge" HorizontalAlignment="Left" Height="42" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 45" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <ComboBox Name="cmbGender" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
-                                <x:String>Male</x:String>
-                                <x:String>Female</x:String>
-                            </ComboBox>
-                        </Grid>
-                        <Grid Height="45" Margin="0,5,0,0"/>
-                    </StackPanel>
-                   
-                    <!--Height weight-->
-               
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Left" Height="545" Width="467" VerticalAlignment="Top" Margin="78,0,0,0">
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Height &amp; Weight" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Weight (in kg):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45">
-                            <toolkit:WatermarkTextBox Name="txtWeight" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 65" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Height (in cm):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <toolkit:WatermarkTextBox Name="txtHeight" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 170" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        
-                    </StackPanel>
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Waist &amp; Hips" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Waist (in cm):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45">
-                            <toolkit:WatermarkTextBox Name="txtWaist"  HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 47" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <TextBlock Name="tblHips" HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Hips (in cm):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <toolkit:WatermarkTextBox Name="txtHips" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 88" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <Grid Height="45" Margin="0,5,0,0"/>
-                    </StackPanel>
-                </StackPanel>
-                
-                <!-- 3 -->
-                <StackPanel HorizontalAlignment="Left" Height="545" Width="467" VerticalAlignment="Top" Margin="78,0,0,0">
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Ideal Weight &amp; BMI" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Ideal Weight (in kg):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45">
-                            <toolkit:WatermarkTextBox Name="txtIdealWeight" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 45" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Ideal BMI (in kg/m2):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <toolkit:WatermarkTextBox Name="txtIdealBMI"  HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 18" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
+            <ScrollViewer x:Name="InnerScroll"  Grid.Row="1" Style="{StaticResource VerticalScrollViewerStyle}">
+                <StackPanel Name="MainContent" Height="800" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,0,0,0" Orientation="Horizontal">
+                    <StackPanel HorizontalAlignment="Left" Width="467" >
+                        <!--<TextBlock HorizontalAlignment="Left" Height="40" Margin="0" TextWrapping="Wrap" Text="Enter" Width="319" VerticalAlignment="Top" Foreground="#FFF42200" FontFamily="Segoe UI" FontSize="32"/>-->
+                        <TextBlock  Text="Age &amp; Gender" Style="{StaticResource headerStyle}" />
+                        <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
+                            <Grid Height="40">
+                                <toolkit:WatermarkTextBox Name="txtAge"  WatermarkText="ex. 45" Style="{StaticResource waterMarkTextBoxStyle}" />
+                            </Grid>
+                            <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                <ComboBox Name="cmbGender" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
+                                    <x:String>Male</x:String>
+                                    <x:String>Female</x:String>
+                                </ComboBox>
+                            </Grid>
+                            <TextBlock Text="Height &amp; Weight" Style="{StaticResource headerStyle}"/>
+                            <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
+                                <TextBlock Style="{StaticResource innerTextBlockStyle}" TextWrapping="Wrap" Text="Weight (in kg):" />
+                                <Grid Height="40">
+                                    <toolkit:WatermarkTextBox Name="txtWeight" WatermarkText="ex. 65"  Style="{StaticResource waterMarkTextBoxStyle}"/>
+                                </Grid>
+                                <TextBlock Text="Height (in cm):" Style="{StaticResource innerTextBlockStyle}"/>
+                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                    <toolkit:WatermarkTextBox Name="txtHeight" WatermarkText="ex. 170" Style="{StaticResource waterMarkTextBoxStyle}" />
+                                </Grid>
+
+                            </StackPanel>
+                            <TextBlock Style="{StaticResource headerStyle}" Text="Waist &amp; Hips" />
+                            <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
+                                <TextBlock Text="Waist (in cm):" Style="{StaticResource innerTextBlockStyle}"/>
+                                <Grid Height="40">
+                                    <toolkit:WatermarkTextBox Name="txtWaist" WatermarkText="ex. 47" Style="{StaticResource waterMarkTextBoxStyle}" />
+                                </Grid>
+                                <TextBlock Name="tblHips" Text="Hips (in cm):" Style="{StaticResource innerTextBlockStyle}"/>
+                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                    <toolkit:WatermarkTextBox Name="txtHips" WatermarkText="ex. 88" Style="{StaticResource waterMarkTextBoxStyle}" />
+                                </Grid>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!--Height weight-->
 
                     </StackPanel>
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Cholestrol &amp; HDL" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Cholestrol (in mmol/L):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45">
-                            <toolkit:WatermarkTextBox Name="txtCholestrol"  HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 5.17" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="HDL (in mmol/L):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <toolkit:WatermarkTextBox Name="txtHDL"  HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 1.18" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                        <Grid Height="45" Margin="0,5,0,0"/>
-                    </StackPanel>
-                    
-                </StackPanel>
-<!-- 4 -->
-                <StackPanel HorizontalAlignment="Left" Height="545" Width="467" VerticalAlignment="Top" Margin="78,0,0,0">
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Neck" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <TextBlock HorizontalAlignment="Left" Height="42" Margin="0" TextWrapping="Wrap" Text="Neck (in cm):" Width="304" Foreground="White" FontSize="25.333" VerticalAlignment="Top" Padding="0,4,0,0" FontFamily="Segoe UI"/>
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <toolkit:WatermarkTextBox Name="txtNeck"  HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" TextWrapping="Wrap" WatermarkText="ex. 30" VerticalAlignment="Top" Width="467" FontSize="28" BorderThickness="0" />
-                        </Grid>
-                    </StackPanel>
-                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="0" TextWrapping="Wrap" Text="Level of Activity:" VerticalAlignment="Bottom" Foreground="#0099CC" FontFamily="Segoe UI" FontSize="53.333" Padding="0"/>
-                    <StackPanel HorizontalAlignment="Left" Margin="0,15,0,0" Width="467" VerticalAlignment="Top">
-                        <Grid Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                            <ComboBox Name="cmbLevelOfActivity" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
-                                <x:String>Sedentary</x:String>
-                                <x:String>Moderate</x:String>
-                                <x:String>Active</x:String>
-                            </ComboBox>
-                        </Grid>
-                        <GridViewItem Tapped="CaclculateGridViewItem_OnTapped" x:Name="CaclculateGridViewItem" Margin="0,110,0,0" Width="467" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left">
-                            <Grid HorizontalAlignment="Left" Height="75" Width="467" VerticalAlignment="Top" Background="#0099CC" Margin="-4,0,0,0">
-                                <TextBlock Height="75" TextWrapping="Wrap" Text=" Calculate" Width="467" Foreground="White" FontFamily="Segoe UI" FontSize="40" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="0,2,0,0" Margin="0,0,0,-4"/>
+                    <!-- 3 -->
+                    <StackPanel HorizontalAlignment="Left" Width="467" VerticalAlignment="Top" Margin="78,0,0,0">
+                        <TextBlock Text="Ideal Weight &amp; BMI" Style="{StaticResource headerStyle}"/>
+                        <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
+                            <TextBlock Text="Ideal Weight (in kg):" Style="{StaticResource innerTextBlockStyle}"/>
+                            <Grid Height="40">
+                                <toolkit:WatermarkTextBox Name="txtIdealWeight" WatermarkText="ex. 45" Style="{StaticResource waterMarkTextBoxStyle}"/>
                             </Grid>
-                        </GridViewItem>
-                        <Grid Height="45" Margin="0,5,0,0"/>
+                            <TextBlock Text="Ideal BMI (in kg/m2):" Style="{StaticResource innerTextBlockStyle}"/>
+                            <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                <toolkit:WatermarkTextBox Name="txtIdealBMI"  WatermarkText="ex. 18" Style="{StaticResource waterMarkTextBoxStyle}" />
+                            </Grid>
+
+                            <TextBlock Text="Cholestrol &amp; HDL"  Style="{StaticResource headerStyle}"/>
+                            <TextBlock Text="Cholestrol (in mmol/L):" Style="{StaticResource innerTextBlockStyle}"/>
+                            <Grid Height="40">
+                                <toolkit:WatermarkTextBox Name="txtCholestrol" WatermarkText="ex. 5.17" Style="{StaticResource waterMarkTextBoxStyle}" />
+                            </Grid>
+                            <TextBlock Text="HDL (in mmol/L):" Style="{StaticResource innerTextBlockStyle}"/>
+                            <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                <toolkit:WatermarkTextBox Name="txtHDL" WatermarkText="ex. 1.18" Style="{StaticResource waterMarkTextBoxStyle}"/>
+                            </Grid>
+                              <StackPanel HorizontalAlignment="Left" Margin="0,25,0,0" Width="467" VerticalAlignment="Top">
+                                <TextBlock Text="Neck (in cm):" Style="{StaticResource innerTextBlockStyle}"/>
+                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                    <toolkit:WatermarkTextBox Name="txtNeck" WatermarkText="ex. 30" Style="{StaticResource waterMarkTextBoxStyle}" />
+                                </Grid>
+                            </StackPanel>
+                            <TextBlock Text="Level of Activity:" Style="{StaticResource innerTextBlockStyle}"/>
+                            <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
+                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                    <ComboBox Name="cmbLevelOfActivity" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
+                                        <x:String>Sedentary</x:String>
+                                        <x:String>Moderate</x:String>
+                                        <x:String>Active</x:String>
+                                    </ComboBox>
+                                </Grid>
+                                <GridViewItem Tapped="CaclculateGridViewItem_OnTapped" x:Name="CaclculateGridViewItem" Width="467" Height="80" Margin="5,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                                    <Grid HorizontalAlignment="Center" Height="80" Width="467" VerticalAlignment="Center" Background="#0099CC" Margin="-4,0,0,0">
+                                        <TextBlock Height="40" TextWrapping="Wrap" TextAlignment="Center" Text="Calculate" Width="467" Foreground="White" FontFamily="Segoe UI" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,2,0,0" />
+                                    </Grid>
+                                </GridViewItem>
+                            </StackPanel>
+                        </StackPanel>
+
                     </StackPanel>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Left" Height="545" Width="467" VerticalAlignment="Top" Margin="78,0,0,0">
                     
+                    <!--results-->
+                    <local:ResultsControl x:Name="resultsControl" Visibility="Collapsed"/>
                 </StackPanel>
-            </StackPanel>
+                
+                
+                
+            </ScrollViewer>
+
         </ScrollViewer>
 
         <VisualStateManager.VisualStateGroups>
