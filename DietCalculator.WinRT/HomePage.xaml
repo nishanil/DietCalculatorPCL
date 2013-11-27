@@ -21,28 +21,41 @@
             <Setter Property="FontFamily" Value="Segoe UI" />
             <Setter Property="FontSize" Value="30" />
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Margin" Value="4" />
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="VerticalAlignment" Value="Bottom" />
             <Setter Property="Padding"  Value="0"/>
+            <Setter Property="Margin" Value="0,4,4,4"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="waterMarkTextStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="6"/>
+            <Setter Property="Opacity" Value="0.5"/>
         </Style>
         <Style x:Key="waterMarkTextBoxStyle" TargetType="toolkit:WatermarkTextBox">
+            <Setter Property="WatermarkTextStyle" Value="{StaticResource waterMarkTextStyle}"/>
             <Setter Property="Width" Value="467"/>
-            <Setter Property="FontSize" Value="28" />
             <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Margin" Value="5,0,0,0" />
+            
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="25" />
             <Setter Property="TextWrapping" Value="Wrap"/>
+
+            <Setter Property="TextAlignment" Value="Left"/>
         </Style>
         <Style x:Key="innerTextBlockStyle" TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="FontSize" Value="18" />
-            <Setter Property="Margin" Value="0" />
+            <Setter Property="Margin" Value="0,5,0,0" />
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="304" />
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
-            <Setter Property="Padding" Value="0,4,0,0" />
+            
             <Setter Property="FontFamily" Value="Segoe UI"/>
         </Style>
 
@@ -81,7 +94,7 @@
                                 <toolkit:WatermarkTextBox Name="txtAge"  WatermarkText="ex. 45" Style="{StaticResource waterMarkTextBoxStyle}" />
                             </Grid>
                             <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                                <ComboBox Name="cmbGender" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
+                                <ComboBox Name="cmbGender" HorizontalAlignment="Left" Height="40" Margin="0,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
                                     <x:String>Male</x:String>
                                     <x:String>Female</x:String>
                                 </ComboBox>
@@ -138,22 +151,22 @@
                             </Grid>
                               <StackPanel HorizontalAlignment="Left" Margin="0,25,0,0" Width="467" VerticalAlignment="Top">
                                 <TextBlock Text="Neck (in cm):" Style="{StaticResource innerTextBlockStyle}"/>
-                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" >
                                     <toolkit:WatermarkTextBox Name="txtNeck" WatermarkText="ex. 30" Style="{StaticResource waterMarkTextBoxStyle}" />
                                 </Grid>
                             </StackPanel>
                             <TextBlock Text="Level of Activity:" Style="{StaticResource innerTextBlockStyle}"/>
                             <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
-                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
-                                    <ComboBox Name="cmbLevelOfActivity" HorizontalAlignment="Left" Height="45" Margin="5,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
+                                <Grid Height="40" VerticalAlignment="Top" HorizontalAlignment="Left">
+                                    <ComboBox Name="cmbLevelOfActivity" HorizontalAlignment="Left" Height="45" Margin="0,0,0,0" VerticalAlignment="Top" Width="467" FontSize="25" BorderThickness="0" SelectedIndex="0">
                                         <x:String>Sedentary</x:String>
                                         <x:String>Moderate</x:String>
                                         <x:String>Active</x:String>
                                     </ComboBox>
                                 </Grid>
-                                <GridViewItem Tapped="CaclculateGridViewItem_OnTapped" x:Name="CaclculateGridViewItem" Width="467" Height="80" Margin="5,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
-                                    <Grid HorizontalAlignment="Center" Height="80" Width="467" VerticalAlignment="Center" Background="#0099CC" Margin="-4,0,0,0">
-                                        <TextBlock Height="40" TextWrapping="Wrap" TextAlignment="Center" Text="Calculate" Width="467" Foreground="White" FontFamily="Segoe UI" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,2,0,0" />
+                                <GridViewItem Tapped="CaclculateGridViewItem_OnTapped" x:Name="CaclculateGridViewItem" Width="467" Height="80" Margin="0,10,0,0">
+                                    <Grid HorizontalAlignment="Center" Height="80" Width="467" Background="#0099CC">
+                                        <TextBlock Height="40" TextWrapping="Wrap" TextAlignment="Center" Text="Calculate" Width="467" Foreground="White" FontFamily="Segoe UI" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" />
                                     </Grid>
                                 </GridViewItem>
                             </StackPanel>
