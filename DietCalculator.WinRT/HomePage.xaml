@@ -131,7 +131,7 @@
                     <StackPanel HorizontalAlignment="Left" Width="467" VerticalAlignment="Top" Margin="78,0,0,0">
                         <TextBlock Text="Ideal Weight &amp; BMI" Style="{StaticResource headerStyle}"/>
                         <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Width="467" VerticalAlignment="Top">
-                            <TextBlock Text="Ideal Weight (in kg):" Style="{StaticResource innerTextBlockStyle}"/>
+                            <TextBlock Text="Ideal Weight (in kg):" Style="{StaticResource innerTextBlockStyle}" Margin="0"/>
                             <Grid Height="40">
                                 <toolkit:WatermarkTextBox Name="txtIdealWeight" WatermarkText="ex. 45" Style="{StaticResource waterMarkTextBoxStyle}"/>
                             </Grid>
