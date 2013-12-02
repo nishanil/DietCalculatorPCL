@@ -16,7 +16,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="DietCalculator.WinRT.App">
       <VisualElements DisplayName="DietCalculator.WinRT" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="DietCalculator.WinRT" ForegroundText="light" BackgroundColor="#738182">
-        <DefaultTile ShowName="logoOnly" />
+        <DefaultTile ShowName="logoOnly" ShortName="DietCalc" />
         <SplashScreen Image="Assets\SplashScreen.png" />
       </VisualElements>
     </Application>
